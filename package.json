@@ -1,7 +1,7 @@
 {
-  "name": "ng18-starter",
+  "name": "ng-routing-experiments-2",
   "version": "0.1.0",
-  "description": "Simple starter for AngularJS + Angular Material + ES6 + Sass + Webpack",
+  "description": "ui-router inside of ui-router",
   "main": "index.js",
   "author": "Fyodor Loenko",
   "license": "MIT",
@@ -49,5 +49,5 @@
       "angularjs-annotate"
     ]
   },
-  "homepage": "https://loenko.github.io/ng18-starter"
+  "homepage": "https://loenko.github.io/ng-routing"
 }
