@@ -1,0 +1,53 @@
+{
+  "name": "ng18-starter",
+  "version": "0.1.0",
+  "description": "Simple starter for AngularJS + Angular Material + ES6 + Sass + Webpack",
+  "main": "index.js",
+  "author": "Fyodor Loenko",
+  "license": "MIT",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.13",
+    "angular": "^1.6.8",
+    "angular-animate": "^1.6.8",
+    "angular-aria": "^1.6.8",
+    "angular-material": "^1.1.6",
+    "angular-messages": "^1.6.8",
+    "angular-route": "^1.6.8",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-angularjs-annotate": "^0.8.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.16.0",
+    "eslint-plugin-angular": "^3.2.0",
+    "file-loader": "^1.1.6",
+    "gh-pages": "^1.1.0",
+    "html-webpack-plugin": "^2.30.1",
+    "mdi": "^2.1.19",
+    "node-sass": "^4.7.2",
+    "normalize.css": "^7.0.0",
+    "postcss-loader": "^2.0.10",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open",
+    "predeploy": "webpack",
+    "deploy": "gh-pages -d dist",
+    "eslint": "./node_modules/.bin/eslint src/app"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "angularjs-annotate"
+    ]
+  },
+  "homepage": "https://loenko.github.io/ng18-starter"
+}
