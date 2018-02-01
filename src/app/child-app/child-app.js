@@ -1,26 +1,19 @@
-import uiRouter from '@uirouter/angularjs';
 import childAppComponent from './child-app.component';
 import Components from './components/components';
 
-const childAppModule = angular.module('child-app', [uiRouter, Components])
+const childAppModule = angular.module('child-app', [Components])
 
 .component('childApp', childAppComponent)
-.config(function($stateProvider,$urlRouterProvider) {
+.config(function($stateProvider) {
     $stateProvider
-        .state('abstract', 
+        .state('child.first',
             {
-                abstract: true,
                 url: '/',
-                component: 'abstract'
-            })
-        .state('abstract.first',
-            {
-                url: '^/child',
                 component: `firstPage`
             })
-        .state('abstract.second',
+        .state('child.second',
             {
-                url: '^/child',
+                url: '/second',
                 component: `secondPage`
             }); 
 })

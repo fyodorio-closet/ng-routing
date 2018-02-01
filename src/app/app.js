@@ -2,7 +2,7 @@ import 'angular-animate';
 import 'angular-aria';
 import 'angular-messages';
 import 'angular-material';
-import 'angular-route';
+import uiRouter from '@uirouter/angularjs';
 import Components from './components/components';
 import ParentApp from './components/parent-app/parent-app';
 import ChildApp from './child-app/child-app'
@@ -14,7 +14,7 @@ const appModule = angular.module('app', [
     'ngAria',
     'ngMessages',
     'ngMaterial',
-    'ngRoute',
+    uiRouter,
     Components,
     ParentApp,
     ChildApp,
@@ -22,12 +22,18 @@ const appModule = angular.module('app', [
 ])
 
 .component('app', AppComponent)
-.config(function($routeProvider, $locationProvider) {
-    $routeProvider
-        .when('/',
-            {template: `<parent-app></parent-app>`})
-        .when('/child', 
-            {template: `<child-app></child-app>`});
+.config(function($stateProvider, $locationProvider) {
+    $stateProvider
+        .state('parent',
+            {
+                url: '/',
+                template: `<parent-app></parent-app>`
+            })
+        .state('child', 
+            {
+                url: '/child',
+                template: `<child-app></child-app>`
+            });
     $locationProvider.html5Mode(true);
 });
 
